@@ -8,13 +8,29 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="canonical" href="https://kumuditharathnayake.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#10242b">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kumuditharathnayake.github.io/">
+  <meta property="og:title" content="Kumuditha Rathnayake | Materials Scientist &amp; Electrochemist">
+  <meta property="og:description" content="Materials scientist and electrochemist working across electrocatalysis, operando X-ray spectroscopy, and computational materials science.">
+  <meta property="og:image" content="https://kumuditharathnayake.github.io/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Kumuditha Rathnayake, Materials Scientist and Electrochemist">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <header class="site-header">
     <nav class="nav container">
-      <a class="brand" href="#home">KR</a>
-      <div class="nav-links">
+      <a class="brand" href="#home" aria-label="Kumuditha Rathnayake, back to top">KR</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
         <a href="#about">About</a>
         <a href="#expertise">Expertise</a>
         <a href="#research">Research</a>
@@ -34,6 +50,7 @@
           <h1>Kumuditha Rathnayake</h1>
           <h2>Materials Scientist &amp; Electrochemist</h2>
           <p class="hero-copy">Ph.D. candidate in Materials Chemistry working at the intersection of electrocatalysis, operando X-ray characterization, computational modeling, and scientific data analysis.</p>
+          <p class="seeking"><span class="seeking-dot" aria-hidden="true"></span>Seeking R&amp;D opportunities at the intersection of materials science, electrochemistry, advanced characterization, and computational methods.</p>
           <div class="hero-actions">
             <a class="button primary" href="#research">View selected research</a>
             <a class="button secondary" href="#contact">Contact</a>
@@ -41,6 +58,20 @@
             <a class="button secondary" href="https://orcid.org/0000-0002-7591-5630" target="_blank" rel="noopener">ORCID</a>
             <a class="button secondary" href="https://github.com/KumudithaRathnayake" target="_blank" rel="noopener">GitHub</a>
           </div>
+        </div>
+        <figure class="portrait">
+          <img src="profile-photo.jpg" alt="Portrait of Kumuditha Rathnayake" width="800" height="1000">
+          <figcaption>Ph.D. Candidate · UIC</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div>
+        <p class="section-kicker">ABOUT</p>
+        <h2 class="section-title">Experimental insight supported by computation and data.</h2>
+        <p class="lead">I am a materials scientist and electrochemist with 5+ years of experience in electrocatalytic material development, custom testing hardware, and X-ray characterization. My work combines structural and spectroscopic characterization, electrochemical measurements, computational modeling, and automated Python workflows to study complex energy materials.</p>
         </div>
         <aside class="focus-card">
           <span class="card-label">Current focus</span>
@@ -50,14 +81,6 @@
             <span>XAS</span><span>CO₂RR</span><span>MOFs/COFs</span><span>Python</span><span>DFT</span>
           </div>
         </aside>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container narrow">
-        <p class="section-kicker">ABOUT</p>
-        <h2 class="section-title">Experimental insight supported by computation and data.</h2>
-        <p class="lead">I am a materials scientist and electrochemist with 5+ years of experience in electrocatalytic material development, custom testing hardware, and X-ray characterization. My work combines structural and spectroscopic characterization, electrochemical measurements, computational modeling, and automated Python workflows to study complex energy materials.</p>
       </div>
     </section>
 
@@ -139,7 +162,7 @@
         <p class="section-kicker">SCIENTIFIC CONTRIBUTIONS</p>
         <h2 class="section-title">Selected publications and manuscripts</h2>
         <div class="pub-list">
-          <article><span>2025</span><div><h3>Chlorination and oxygenation of carbon electrodes for covalent attachment of thiol-terminated molecules</h3><p><strong>Carbon Trends</strong>, Article 100539.</p></div></article>
+          <article><span>2025</span><div><h3><a href="https://doi.org/10.1016/j.cartre.2025.100539" target="_blank" rel="noopener">Chlorination and oxygenation of carbon electrodes for covalent attachment of thiol-terminated molecules</a></h3><p class="authors">X. Zheng, I. L. Bolotin, B. Tanriover, <strong>K. Rathnayake</strong>, E. J. Askins, J. Cabana, N. P. Mankad, K. D. Glusac</p><p><em>Carbon Trends</em> 20, 100539 (2025) · <a class="pub-link" href="https://doi.org/10.1016/j.cartre.2025.100539" target="_blank" rel="noopener">Read paper &nearr;</a></p></div></article>
           <article><span>Under review</span><div><h3>Efficient Room-Temperature Redox Electrocatalysis in Liquid Organic Hydrogen Carriers</h3><p>Co-author.</p></div></article>
           <article><span>In preparation</span><div><h3>Substrate dependent electronic structures and CO₂ reduction reactivity of vapor-phase grown Covalent Organic Frameworks</h3><p>First author.</p></div></article>
           <article><span>In preparation</span><div><h3>Activity versus stability of a molybdenum bis-dithiolene complex toward electrocatalytic oxygen atom transfer</h3><p>First author.</p></div></article>
@@ -203,6 +226,20 @@
       <span>Materials Science · Electrochemistry · X-ray Spectroscopy</span>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function () {
+      var header = document.querySelector('.site-header');
+      var toggle = document.querySelector('.nav-toggle');
+      function setOpen(open) {
+        header.classList.toggle('menu-open', open);
+        toggle.setAttribute('aria-expanded', open);
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      }
+      toggle.addEventListener('click', function () { setOpen(!header.classList.contains('menu-open')); });
+      document.querySelectorAll('.nav-links a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+    })();
+  </script>
 </body>
 </html>
