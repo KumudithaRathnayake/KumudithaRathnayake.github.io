@@ -21,7 +21,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Kumuditha Rathnayake, Materials Scientist and Electrochemist">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
   <header class="site-header">
@@ -120,6 +120,10 @@
               <p>Synthesis and characterization of conductive 2D metal-organic framework electrocatalysts, with crystal-structure and strain analysis, product quantification, XAS characterization, computational structure workflows, and custom operando electrochemical cells.</p>
               <div class="tag-row"><span>2D MOFs</span><span>Operando XAS</span><span>PXRD</span><span>NMR</span><span>GC-MS</span></div>
             </div>
+            <figure class="project-media">
+              <button class="zoom" type="button" data-full="fig-lohc-operando.jpg" aria-label="Enlarge image: Custom operando electrochemical cell positioned in the X-ray beam path"><img src="fig-lohc-operando.jpg" alt="Custom operando electrochemical cell positioned in the X-ray beam path" width="488" height="400" loading="lazy"><span class="zoom-hint" aria-hidden="true">&#x2922;</span></button>
+              <figcaption>Custom operando electrochemical cell positioned in the X-ray beam path for in situ XAS.</figcaption>
+            </figure>
           </article>
           <article class="project">
             <div class="project-index">02</div>
@@ -128,6 +132,13 @@
               <p>Investigation of vapor-phase-grown covalent organic framework catalysts on conductive supports using grazing-incidence diffraction, XAS, electrochemical CO₂ reduction, product analysis, and electronic-structure/spectral calculations.</p>
               <div class="tag-row"><span>COFs</span><span>CO₂RR</span><span>GI-XAS</span><span>ORCA</span><span>Spectral Simulation</span></div>
             </div>
+            <figure class="project-media">
+              <button class="zoom dark-panel" type="button" data-full="fig-cof-schematic.jpg" aria-label="Enlarge image: Schematic of a vapor-deposited CuZn-porphyrin COF film on a carbon-cloth gas diffusion electrode reducing CO2"><img src="fig-cof-schematic.jpg" alt="Schematic of a vapor-deposited CuZn-porphyrin COF film on a carbon-cloth gas diffusion electrode reducing CO2" width="1800" height="1062" loading="lazy"><span class="zoom-hint" aria-hidden="true">&#x2922;</span></button>
+              <div class="media-secondary">
+                <button class="zoom thumb" type="button" data-full="fig-cof-cell.jpg" aria-label="Enlarge image: Custom electrochemical cell with an X-ray window"><img src="fig-cof-cell.jpg" alt="Custom electrochemical cell with an X-ray window" width="900" height="1196" loading="lazy"><span class="zoom-hint" aria-hidden="true">&#x2922;</span></button>
+                <figcaption>CuZn-porphyrin COF grown from the vapor phase on a carbon-cloth gas diffusion electrode for CO₂ reduction. <span class="cap-sub">Thumbnail: custom cell with an X-ray window.</span></figcaption>
+              </div>
+            </figure>
           </article>
           <article class="project">
             <div class="project-index">03</div>
@@ -136,6 +147,13 @@
               <p>Study of homogeneous and heterogeneous electrocatalysts using electrochemical measurements, NMR and GC-MS product analysis, operando XAS in custom cells, and computational studies aimed at understanding catalytic mechanisms.</p>
               <div class="tag-row"><span>OAT</span><span>Electrochemistry</span><span>Operando XAS</span><span>Mechanistic Study</span></div>
             </div>
+            <figure class="project-media">
+              <button class="zoom light-panel" type="button" data-full="fig-oat-reaction.png" aria-label="Enlarge image: Reaction scheme: triphenylphosphine and water converted to triphenylphosphine oxide by the Mo(IV)O(bdt)2 2- catalyst"><img src="fig-oat-reaction.png" alt="Reaction scheme: triphenylphosphine and water converted to triphenylphosphine oxide by the Mo(IV)O(bdt)2 2- catalyst" width="1367" height="438" loading="lazy"><span class="zoom-hint" aria-hidden="true">&#x2922;</span></button>
+              <div class="media-secondary">
+                <button class="zoom thumb" type="button" data-full="fig-oat-cell.jpg" aria-label="Enlarge image: Operando electrochemical cell set up for X-ray measurements"><img src="fig-oat-cell.jpg" alt="Operando electrochemical cell set up for X-ray measurements" width="456" height="386" loading="lazy"><span class="zoom-hint" aria-hidden="true">&#x2922;</span></button>
+                <figcaption>Electrocatalytic oxidation of PPh₃ using water as the oxygen source, catalyzed by Mo(IV)O(bdt)₂²⁻. <span class="cap-sub">Thumbnail: operando cell for X-ray measurements.</span></figcaption>
+              </div>
+            </figure>
           </article>
         </div>
       </div>
@@ -220,6 +238,11 @@
     </section>
   </main>
 
+  <dialog class="lightbox" aria-label="Enlarged image">
+    <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+    <img alt="">
+  </dialog>
+
   <footer>
     <div class="container footer-inner">
       <span>© <span id="year">2026</span> Kumuditha Rathnayake</span>
@@ -239,6 +262,20 @@
       toggle.addEventListener('click', function () { setOpen(!header.classList.contains('menu-open')); });
       document.querySelectorAll('.nav-links a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+    })();
+    (function () {
+      var box = document.querySelector('.lightbox');
+      if (!box || !box.showModal) return;
+      var img = box.querySelector('img');
+      document.querySelectorAll('.zoom').forEach(function (b) {
+        b.addEventListener('click', function () {
+          var src = b.getAttribute('data-full'), inner = b.querySelector('img');
+          img.src = src; img.alt = inner ? inner.alt : '';
+          box.classList.toggle('on-dark', b.classList.contains('dark-panel'));
+          box.showModal();
+        });
+      });
+      box.addEventListener('click', function (e) { if (e.target === box || e.target.classList.contains('lightbox-close')) box.close(); });
     })();
   </script>
 </body>
